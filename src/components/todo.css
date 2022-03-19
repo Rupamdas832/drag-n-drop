@@ -1,0 +1,132 @@
+.todo-container {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+.add-todo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+    width: 60%;
+}
+
+.add-todo-container input {
+    flex: 1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.add-todo-button {
+    padding: 8px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
+.todo-lists {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: 100%;
+    margin-top: 1rem;
+}
+.active-todos,
+.in-progress-todos,
+.finished-todos {
+    height: 100%;
+    border: 3px solid rgb(231, 231, 231);
+    flex: 1;
+    padding-bottom: 1rem;
+    min-height: 500px;
+    background-color: white;
+    margin: 0 2px;
+}
+.active-todos.droppable {
+    border: 3px solid purple;
+    background-color: rgb(253, 193, 253);
+}
+.in-progress-todos.droppable {
+    border: 3px solid purple;
+    background-color: rgb(236, 236, 236);
+}
+.finished-todos.droppable {
+    border: 3px solid rgb(87, 255, 87);
+    background-color: rgb(210, 255, 210);
+}
+.todos-header {
+    padding: 8px;
+}
+.todos-header.active {
+    background-color: rgb(195, 116, 248);
+}
+.todos-header.in-progress {
+    background-color: rgb(202, 200, 200);
+}
+.todos-header.finished {
+    background-color: rgb(129, 255, 129);
+}
+.list-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(247, 139, 247);
+    border-bottom: 3px solid rgb(190, 2, 190);
+    border-radius: 4px;
+    box-shadow: 2px 4px 4px rgba(172, 0, 172, 0.226);
+    padding: 8px;
+    margin: 0 8px;
+    margin-top: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.item-action-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.item-del-btn {
+    padding: 2px 4px;
+    font-size: 0.6rem;
+    background-color: rgb(255, 144, 144);
+    border: none;
+    border-radius: 4px;
+}
+.item-body {
+    margin-top: 10px;
+    font-weight: 600;
+}
+.status-select {
+    font-size: 10px;
+}
+.status-option {
+    padding: 8px;
+}
+.status-option.current {
+    background-color: purple;
+    color: white;
+}
+
+@media only screen and (max-width: 400px) {
+    .list-item {
+        font-size: 11px;
+        margin: 0 4px;
+        margin-top: 0.5rem;
+        padding: 4px;
+    }
+    .todos-header {
+        font-size: 12px;
+        padding: 4px;
+    }
+    .status-select {
+        font-size: 8px;
+    }
+    .status-option {
+        padding: 4px;
+    }
+    .item-del-btn {
+        padding: 4px;
+        font-size: 0.5rem;
+    }
+}
